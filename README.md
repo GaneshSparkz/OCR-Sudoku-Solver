@@ -53,6 +53,7 @@ optional arguments:
 
 ### 5. Result
 Input image:
+
 ![Input image](sudoku.jpg)
 ```Shell
 Using TensorFlow backend.
@@ -90,6 +91,7 @@ Using TensorFlow backend.
 +-----------------------+
 ```
 Output:
+
 ![Output](solved_puzzle.jpg)
 
 ```Shell

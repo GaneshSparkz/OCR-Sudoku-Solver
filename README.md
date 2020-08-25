@@ -14,7 +14,7 @@ Solve the sudoku puzzle from an image using OCR of Digits and Computer Vision
 * The **Dataset** used for this model is a subset of [Chars74K image dataset](http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/)
 * After OCR of digits, the sudoku puzzle is solved using Backtracking algorithm.
 * I have well documented my code using comments wherever necessary. Do read the code for further clarification.
-* **Do check out my repository on solving the sudoku puzzle using Backtracking algorithm - [Sudoku Solver Backtracking](https://github.com/GaneshSparkz/Sudoku-Solver-Backtracking)**
+* **Do check out my repository on solving the sudoku puzzle using Backtracking algorithm :point_right: [Sudoku Solver Backtracking](https://github.com/GaneshSparkz/Sudoku-Solver-Backtracking)**
 
 ## Steps for executing the code
 ### 1. Clone this repository
@@ -36,7 +36,11 @@ pip install -r requirements.txt
 ```Shell
 python solve_sudoku.py -m trained_model/digit_classifier.h5 -i sudoku.jpg
 ```
-The command line arguments to be used are...
+To visualize each step in the process, set the debug flag to 1 :point_down:
+```Shell
+python solve_sudoku.py -m trained_model/digit_classifier.h5 -i sudoku.jpg -d 1
+```
+The command line arguments to be used are... :point_down:
 ```Shell
 usage: solve_sudoku.py [-h] -m MODEL -i IMAGE [-d {0,1}]
 

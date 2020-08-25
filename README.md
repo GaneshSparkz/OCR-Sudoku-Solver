@@ -106,7 +106,7 @@ Output:
 2. Unzip the file and place the dataset folder in the working directory
 3. Edit the model architecture if required in **utils/model.py** file.
 4. Edit the hyperparameters used if required in **train.py** file as given below.
-Lines 24 - 27
+  * Lines 24 - 27
 ```Python
 # initializing the hyperparameters like learning rate, number of epochs
 # and batch size
@@ -115,7 +115,7 @@ EPOCHS = 10
 BATCH_SIZE = 50
 STEPS_PER_EPOCH = 2000
 ```
-Lines 69 - 75
+  * Lines 69 - 75
 ```Python
 # augment the data
 data_gen = ImageDataGenerator(

@@ -55,6 +55,7 @@ optional arguments:
 Input image:
 
 <img src="sudoku.jpg" alt="Input Image" width="500">
+
 ```Shell
 Using TensorFlow backend.
 [INFO] loading digit classifier...

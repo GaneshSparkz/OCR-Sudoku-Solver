@@ -10,11 +10,12 @@ Solve the sudoku puzzle from an image using OCR of Digits and Computer Vision
 6. Display the output result to the user.
 
 * Steps 1, 2 and 3 are accomplished using OpenCV and other Computer Vision and Image Processing Libraries.
-* To OCR the digits from the cell of the board, I have trained a Deep Learning CNN model using keras and tensorflow to classify the digits
+* To OCR the digits from the cell of the board, I have trained a Deep Learning CNN model called SudokuNet using keras and tensorflow to classify the digits
 * The **Dataset** used for this model is a subset of [Chars74K image dataset](http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/)
 * After OCR of digits, the sudoku puzzle is solved using Backtracking algorithm.
 * I have well documented my code using comments wherever necessary. Do read the code for further clarification.
-* **Do check out my repository on solving the sudoku puzzle using Backtracking algorithm :point_right: [Sudoku Solver Backtracking](https://github.com/GaneshSparkz/Sudoku-Solver-Backtracking)**
+
+#### Do check out my repository on solving the sudoku puzzle using Backtracking algorithm :point_right: [Sudoku Solver Backtracking](https://github.com/GaneshSparkz/Sudoku-Solver-Backtracking)
 
 ## Steps for executing the code
 ### 1. Clone this repository
@@ -54,6 +55,7 @@ optional arguments:
                         set to 1 to visualize each step of the process
                         (default: 0)
 ```
+**The model is already trained and the trained model (.h5 file) is uploaded in trained_model/ directory**
 
 ### 5. Result
 Input image:
@@ -99,6 +101,37 @@ Output:
 
 <img src="solved_puzzle.jpg" alt="Input Image" width="500">
 
+### If you want to train the model, follow these steps :point_down:
+1. Download the dataset from this link :point_right: [Dataset](https://drive.google.com/file/d/1ysIQhQB8NT6nVkaO0FAr4BU1oOOhvZlR/view?usp=sharing)
+2. Unzip the file and place the dataset folder in the working directory
+3. Edit the model architecture if required in **utils/model.py** file.
+4. Edit the hyperparameters used if required in **train.py** file as given below.
+Lines 24 - 27
+```Python
+# initializing the hyperparameters like learning rate, number of epochs
+# and batch size
+LR = 1e-3
+EPOCHS = 10
+BATCH_SIZE = 50
+STEPS_PER_EPOCH = 2000
+```
+Lines 69 - 75
+```Python
+# augment the data
+data_gen = ImageDataGenerator(
+    width_shift_range=0.1,
+    height_shift_range=0.1,
+    rotation_range=10,
+    shear_range=0.1,
+    zoom_range=0.2
+)
+```
+
+5. Run the train.py file
+```Shell
+python train.py -o trained_model/digit_classifier.py
+```
+The command line arguments to be used are... :point_down:
 ```Shell
 usage: train.py [-h] -o OUTPUT
 

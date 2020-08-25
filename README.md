@@ -140,3 +140,5 @@ optional arguments:
   -o OUTPUT, --output OUTPUT
                         path to save the trained model file
 ```
+
+#### Give this repo a star :star: if you like it!

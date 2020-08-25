@@ -54,7 +54,7 @@ optional arguments:
 ### 5. Result
 Input image:
 
-![Input image](sudoku.jpg =500x)
+<img src="sudoku.jpg" alt="Input Image" width="500">
 ```Shell
 Using TensorFlow backend.
 [INFO] loading digit classifier...
@@ -92,7 +92,7 @@ Using TensorFlow backend.
 ```
 Output:
 
-![Output](solved_puzzle.jpg =500x)
+<img src="solved_puzzle.jpg" alt="Input Image" width="500">
 
 ```Shell
 usage: train.py [-h] -o OUTPUT

@@ -1,4 +1,5 @@
 # OCR Sudoku Solver
+Solve the sudoku puzzle from an image using OCR of Digits and Computer Vision
 
 ```Shell
 usage: train.py [-h] -o OUTPUT

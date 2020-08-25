@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+training_video
+dataset
+.vscode
+demo.py
+sudoku.jpg
+test.py
